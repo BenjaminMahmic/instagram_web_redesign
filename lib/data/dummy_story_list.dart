@@ -1,0 +1,25 @@
+import 'package:instagram_web_redesign/models/story.dart';
+
+List<Story> dummyStorys = [
+  Story(imageUrl: 'assets/pictures/person1.jpg'),
+  Story(imageUrl: 'assets/pictures/person2.jpg'),
+  Story(imageUrl: 'assets/pictures/person3.jpg'),
+  Story(imageUrl: 'assets/pictures/person4.jpg'),
+  Story(imageUrl: 'assets/pictures/person5.jpg'),
+  Story(imageUrl: 'assets/pictures/person6.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person7.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person1.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person2.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person3.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person4.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person5.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person6.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person7.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person1.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person2.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person3.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person4.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person5.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person6.jpg', viewed: true),
+  Story(imageUrl: 'assets/pictures/person7.jpg', viewed: true),
+];
