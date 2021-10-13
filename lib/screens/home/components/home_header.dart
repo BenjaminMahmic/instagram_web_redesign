@@ -112,7 +112,7 @@ class HomeHeader extends StatelessWidget {
               height: 35,
               padding: const EdgeInsets.symmetric(horizontal: AppConst.padding),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(3),
+                borderRadius: BorderRadius.circular(5),
                 gradient: const LinearGradient(
                   colors: [
                     AppConst.colorRedOrange,

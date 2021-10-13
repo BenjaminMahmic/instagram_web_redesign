@@ -11,36 +11,66 @@ class HomeStoryList extends StatelessWidget {
     ScrollController _scrollController = ScrollController();
 
     return SliverToBoxAdapter(
-      child: SizedBox(
-        height: 120,
-        width: double.infinity,
-        child: ScrollConfiguration(
-          behavior: MyCustomScrollBehavior(),
-          child: ListView.builder(
-            controller: _scrollController,
-            scrollDirection: Axis.horizontal,
-            itemCount: dummyStorys.length,
-            itemBuilder: (ctx, i) {
-              return i == 0
-                  ? Row(
-                      children: [
-                        const StoryCard(
-                          imageUrl: 'assets/pictures/user.jpg',
-                          isViewed: true,
-                          haveChild: true,
+      child: ScrollConfiguration(
+        behavior: MyCustomScrollBehavior(),
+        child: Column(
+          children: [
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: AppConst.padding * 2),
+              child: Row(
+                children: [
+                  const Text('Stories'),
+                  const Spacer(),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.play_circle_outline_rounded,
+                        color: Colors.white54,
+                        size: 16,
+                      ),
+                      TextButton(
+                        child: const Text(
+                          'Watch all',
+                          style: TextStyle(color: Colors.white54),
                         ),
-                        StoryCard(
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 120,
+              width: double.infinity,
+              child: ListView.builder(
+                controller: _scrollController,
+                scrollDirection: Axis.horizontal,
+                itemCount: dummyStorys.length,
+                itemBuilder: (ctx, i) {
+                  return i == 0
+                      ? Row(
+                          children: [
+                            const StoryCard(
+                              imageUrl: 'assets/pictures/user.jpg',
+                              isViewed: true,
+                              haveChild: true,
+                            ),
+                            StoryCard(
+                              imageUrl: dummyStorys[i].imageUrl,
+                              isViewed: dummyStorys[i].viewed,
+                            ),
+                          ],
+                        )
+                      : StoryCard(
                           imageUrl: dummyStorys[i].imageUrl,
                           isViewed: dummyStorys[i].viewed,
-                        ),
-                      ],
-                    )
-                  : StoryCard(
-                      imageUrl: dummyStorys[i].imageUrl,
-                      isViewed: dummyStorys[i].viewed,
-                    );
-            },
-          ),
+                        );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -78,12 +108,14 @@ class StoryCard extends StatelessWidget {
                 begin: Alignment.bottomLeft,
                 end: Alignment.topRight,
               ),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.white24,
-            blurRadius: 8,
-          )
-        ],
+        boxShadow: isViewed
+            ? null
+            : const [
+                BoxShadow(
+                  color: Colors.white24,
+                  blurRadius: 8,
+                )
+              ],
       ),
       child: Center(
         child: haveChild == true

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_web_redesign/app/constants.dart';
 import 'package:instagram_web_redesign/app/screen_size.dart';
 import 'package:instagram_web_redesign/components/drawer.dart';
+import 'package:instagram_web_redesign/screens/home/components/feed.dart';
 
 import 'components/home_header.dart';
 import 'components/story_list.dart';
@@ -29,9 +30,11 @@ class HomeScreen extends StatelessWidget {
                   scaffoldKey: _scaffoldKey,
                 ),
                 const SliverToBoxAdapter(
-                  child: SizedBox(height: AppConst.padding * 4),
-                ),
+                    child: SizedBox(height: AppConst.padding * 4)),
                 const HomeStoryList(),
+                const SliverToBoxAdapter(
+                    child: SizedBox(height: AppConst.padding * 4)),
+                const HomeFeed(),
               ],
             ),
           ),
