@@ -30,11 +30,9 @@ class HomeHeader extends StatelessWidget {
               ),
             if (screenStatus == ScreenStatus.mobile)
               const SizedBox(width: AppConst.padding),
-            Container(
+            SizedBox(
               height: 35,
-              constraints: const BoxConstraints(
-                maxWidth: 200,
-              ),
+              width: screenStatus == ScreenStatus.mobile ? 100 : 200,
               child: TextField(
                 style: const TextStyle(color: Colors.white, fontSize: 12),
                 decoration: InputDecoration(

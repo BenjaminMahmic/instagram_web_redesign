@@ -3,6 +3,7 @@ import 'package:instagram_web_redesign/app/constants.dart';
 import 'package:instagram_web_redesign/app/screen_size.dart';
 import 'package:instagram_web_redesign/components/drawer.dart';
 import 'package:instagram_web_redesign/screens/home/components/feed.dart';
+import 'package:instagram_web_redesign/screens/home/components/feed_header.dart';
 
 import 'components/home_header.dart';
 import 'components/story_list.dart';
@@ -34,6 +35,9 @@ class HomeScreen extends StatelessWidget {
                 const HomeStoryList(),
                 const SliverToBoxAdapter(
                     child: SizedBox(height: AppConst.padding * 4)),
+                const FeedHeader(),
+                const SliverToBoxAdapter(
+                    child: SizedBox(height: AppConst.padding)),
                 const HomeFeed(),
               ],
             ),

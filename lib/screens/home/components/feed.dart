@@ -73,14 +73,14 @@ class FeedCard extends StatelessWidget {
                 children: [
                   const Icon(
                     Icons.favorite_border,
-                    color: Colors.white,
+                    color: Colors.white54,
                   ),
                   const SizedBox(width: AppConst.padding / 2),
                   Text(post.likes.toString()),
                   const SizedBox(width: AppConst.padding),
                   const Icon(
                     Icons.chat_bubble_outline_rounded,
-                    color: Colors.white,
+                    color: Colors.white54,
                   ),
                   const SizedBox(width: AppConst.padding / 2),
                   Text(post.comments.toString()),
