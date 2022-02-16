@@ -1,4 +1,4 @@
-# instagram_web_redesign
+INSTAGRAM WEB REDESIGN
 
 Full responsive flutter web instagram redesing UI. ( Supprot web, tablet, mobile mode). 
 
